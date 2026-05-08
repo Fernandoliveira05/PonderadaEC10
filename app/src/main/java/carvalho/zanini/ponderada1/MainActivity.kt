@@ -1,0 +1,113 @@
+package carvalho.zanini.ponderada1
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import kotlin.random.Random
+import androidx.compose.foundation.Image
+import androidx.compose.ui.res.painterResource
+import androidx.compose.foundation.layout.size
+
+import androidx.compose.ui.tooling.preview.Preview
+import carvalho.zanini.ponderada1.ui.theme.Ponderada1Theme
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            LancadorDeDadosApp()
+        }
+    }
+}
+@Preview(showBackground = true)
+@Composable
+fun LancadorDeDadosApp() {
+    var dadoSelecionado by remember { mutableStateOf("D6") }
+    var resultado by remember { mutableStateOf("Clique no botão para lançar o dado") }
+
+    val dados = listOf("D6", "D10", "D20", "D100")
+
+    var valorSorteado by remember { mutableStateOf(0) }
+
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(24.dp),
+        horizontalAlignment = Alignment.Start,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Text(
+            text = "Lançador de Dados",
+            fontSize = 28.sp
+        )
+
+        Spacer(modifier = Modifier.height(24.dp))
+
+        Text(text = "Escolha o tipo de dado:")
+
+        dados.forEach { dado ->
+            Row(
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                RadioButton(
+                    selected = dadoSelecionado == dado,
+                    onClick = { dadoSelecionado = dado }
+                )
+                Text(text = dado)
+            }
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Button(
+            onClick = {
+                valorSorteado = when (dadoSelecionado) {
+                    "D6" -> Random.nextInt(6) + 1
+                    "D10" -> Random.nextInt(10) + 1
+                    "D20" -> Random.nextInt(20) + 1
+                    "D100" -> Random.nextInt(100) + 1
+                    else -> 0
+                }
+
+                resultado = "Resultado do $dadoSelecionado: $valorSorteado"
+            },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(text = "Lançar dado")
+        }
+
+        if (dadoSelecionado == "D6") {
+            val imagemDado = when (valorSorteado) {
+                1 -> R.drawable.d1
+                2 -> R.drawable.d2
+                3 -> R.drawable.d3
+                4 -> R.drawable.d4
+                5 -> R.drawable.d5
+                6 -> R.drawable.d6
+
+                else -> R.drawable.erro
+            }
+
+            Image(
+                painter = painterResource(id = imagemDado),
+                contentDescription = "Resultado do dado",
+                modifier = Modifier.size(120.dp)
+            )
+        }
+
+        Spacer(modifier = Modifier.height(24.dp))
+
+        Text(
+            text = resultado,
+            fontSize = 20.sp
+        )
+    }
+}
