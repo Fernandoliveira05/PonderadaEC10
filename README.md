@@ -7,11 +7,28 @@ O desafio era simples, tínhamos uma lista de coisas para verificarmos e no fina
 
 <div align="center">
 
-| Foto | Nome | LinkedIn |
-|------|------|----------|
-| <img src="./assets/Fernando.jpg" width="100" style="border-radius: 50%;" /> | **Fernando Soares de Oliveira** | [LinkedIn](https://www.linkedin.com/in/fernando-soares-de-oliveira/) |
-| <img src="./assets/pietra.jpg" width="100" style="border-radius: 50%;" /> | **Pietra Batista** | [LinkedIn](https://www.linkedin.com/in/pietrabatista/) |
-| <img src="./assets/Roberto.jpg" width="100" style="border-radius: 50%;" /> | **Roberto Branco Diniz Filho** | [LinkedIn](https://www.linkedin.com/in/roberto-dbf/) |
+<table>
+  <tr>
+    <td align="center" width="260">
+      <img src="./assets/Fernando.jpg" width="120" alt="Foto de Fernando Soares de Oliveira" /><br><br>
+      <strong>Fernando Soares de Oliveira</strong><br>
+      <sub>Código, documentação e explicação</sub><br><br>
+      <a href="https://www.linkedin.com/in/fernando-soares-de-oliveira/">LinkedIn</a>
+    </td>
+    <td align="center" width="260">
+      <img src="./assets/pietra.jpg" width="120" alt="Foto de Pietra Batista" /><br><br>
+      <strong>Pietra Batista</strong><br>
+      <sub>Código, anotações e ideias de resolução</sub><br><br>
+      <a href="https://www.linkedin.com/in/pietrabatista/">LinkedIn</a>
+    </td>
+    <td align="center" width="260">
+      <img src="./assets/Roberto.jpg" width="120" alt="Foto de Roberto Branco Diniz Filho" /><br><br>
+      <strong>Roberto Branco Diniz Filho</strong><br>
+      <sub>Código, sintaxe de Kotlin e ideias de resolução</sub><br><br>
+      <a href="https://www.linkedin.com/in/roberto-dbf/">LinkedIn</a>
+    </td>
+  </tr>
+</table>
 
 </div>
 
