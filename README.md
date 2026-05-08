@@ -1,7 +1,7 @@
 # Atividade Ponderada 1 - Semana 03
 
 Durante a semana 03 do décimo módulo de Engenharia da Computação recebemos o nosso primeiro desafio: uma ponderada envolvendo desenvolvimento mobile, especificamente o desenvolvimento para Android em Kotlin. </br>
-O desafio era simples, tínhamos uma lista de coisas para verificarmos e no final deveríamos ter um app de dado 100% funcional. Esse dado deveria ter 4 diferentes versões: D6, D10, D20, D100, todas com a mesma premissa, mas com resultados que ficavam cada vez maiores. 
+O desafio era simples, tínhamos uma lista de coisas para verificarmos e no final deveríamos ter um app de dado 100% funcional. Esse dado deveria ter 4 diferentes versões: D6, D10, D20, D100, todas com a mesma premissa, mas com resultados que ficavam cada vez maiores.
 
 # Responsáveis por essa atividade
 
@@ -9,16 +9,16 @@ O desafio era simples, tínhamos uma lista de coisas para verificarmos e no fina
 
 | Foto | Nome | LinkedIn |
 |------|------|----------|
-| <img src="./fernando.jpg" width="100" style="border-radius: 50%;" /> | **Fernando Soares de Oliveira** | [LinkedIn](https://www.linkedin.com/in/fernando-soares-de-oliveira/) |
-| <img src="./pietra.jpg" width="100" style="border-radius: 50%;" /> | **Pietra Batista** | [LinkedIn](https://www.linkedin.com/in/pietrabatista/) |
-| <img src="./roberto.jpg" width="100" style="border-radius: 50%;" /> | **Roberto Branco Diniz Filho** | [LinkedIn](https://www.linkedin.com/in/roberto-dbf/) |
+| <img src="./assets/Fernando.jpg" width="100" style="border-radius: 50%;" /> | **Fernando Soares de Oliveira** | [LinkedIn](https://www.linkedin.com/in/fernando-soares-de-oliveira/) |
+| <img src="./assets/pietra.jpg" width="100" style="border-radius: 50%;" /> | **Pietra Batista** | [LinkedIn](https://www.linkedin.com/in/pietrabatista/) |
+| <img src="./assets/Roberto.jpg" width="100" style="border-radius: 50%;" /> | **Roberto Branco Diniz Filho** | [LinkedIn](https://www.linkedin.com/in/roberto-dbf/) |
 
 </div>
 
 
 # Qual o racional da equipe?
 
-Talvez você esteja se perguntando quais foram os nossos passos para chegarmos até a resolução do desafio proposto. Nós imaginamos que você teria essa dúvida (É, Murilão, a gente sabia!) então desde o primeiro momento anotamos cada uma das etapas que seguiamos e você pode conferir a nossa elaboração aqui:
+Talvez você esteja se perguntando quais foram os nossos passos para chegarmos até a resolução do desafio proposto. Nós imaginamos que você teria essa dúvida (É, Murilão, a gente sabia!) então desde o primeiro momento anotamos cada uma das etapas que seguíamos e você pode conferir a nossa elaboração aqui:
 
 Começamos pela parte em que quase todo dev esquece, quebrando o problema em pequenas tarefas:
 
@@ -33,34 +33,34 @@ TASK:
 7. expandir pra d100
 8. implementar uma funcionalidade onde o usuário consiga escolher o tipo da dado e pressione um botão
 
-———-
+---
 
 CONCLUSÃO:
 
 - os dados geram valores de acordo com a realidade
 - a interface permite escolha de dado
 - o fluxo deve ser coerente
-- colocar faces diferentes 
+- colocar faces diferentes
 
 
-—————
+-----
 
 DIARIO DE DESENVOLVIMENTO:
 
-- quando fomos rodar o repo deu o warning de que o graddle dava dando erro, algo que ocorreu na aula anterior e a prof Fabi deu uma orientação pra nos. então começamos um projeto vazio e colamos somente as pastas fundamentais para o desenvolvimento da atividade. Colamos a pasta /app (usada pelo professor para o desenvolvimento do app) e o arquivo local.properties
+- quando fomos rodar o repo deu o warning de que o gradle estava dando erro, algo que ocorreu na aula anterior e a prof Fabi deu uma orientação para nós. então começamos um projeto vazio e colamos somente as pastas fundamentais para o desenvolvimento da atividade. Colamos a pasta `/app` (usada pelo professor para o desenvolvimento do app) e o arquivo `local.properties`
 - instalamos o pixel 6a para conseguirmos entender o erro na prática
 - esperamos instalar e em seguida rodamos pela primeira vez o app
 - ao rodar pela primeira vez, tudo parecia muito certo para nós, mas desde quando um dado D6 tem 0 e não tem 6? Problema identificado!
 - identificamos o problema na linha 67
 - o problema não é o tanto de números que são gerados (que são exatamente 6), o problema são os números exibidos. Com isso, podemos simplesmente adicionar um
-- Com “command + f” procuramos por “D6”, para identificar onde visualmente criamos o botão de “D6”
-- Identificamos e criamos todos os botões para os dados necessários 
-- Identificamos como replicar o processo do “D6” com os demais dados e criamos o mesmo processo para todos
-- pedimos auxilio para a AI para entender como colocar imagens dentro do projeto. o objetivo é mostrar imagens correspondentes a face do dado que tiramos
-- conclusao: precisamos colocar a imagem dentro app/src/main/res/drawable
-- fizemos os imports necessarios
+- com `Command + F` procuramos por `D6`, para identificar onde visualmente criamos o botão de `D6`
+- identificamos e criamos todos os botões para os dados necessários
+- identificamos como replicar o processo do `D6` com os demais dados e criamos o mesmo processo para todos
+- pedimos auxílio para a IA para entender como colocar imagens dentro do projeto. o objetivo é mostrar imagens correspondentes à face do dado que tiramos
+- conclusão: precisamos colocar a imagem dentro `app/src/main/res/drawable`
+- fizemos os imports necessários
 
-Essa é a versão crua, exatamente como anotamos em nosso bloco de notas, mas nos sentiríamos muito culpados caso não colocassemos uma versão mais organizada, então aqui vai (essa nova versão é a mesma coisa do acima, mas feita com auxílio de Inteligência Artificial):
+Essa é a versão crua, exatamente como anotamos em nosso bloco de notas, mas nos sentiríamos muito culpados caso não colocássemos uma versão mais organizada, então aqui vai (essa nova versão é a mesma coisa do acima, mas feita com auxílio de Inteligência Artificial):
 
 ## Diário de Desenvolvimento
 
@@ -87,13 +87,13 @@ Após adicionar os arquivos necessários, fizemos os imports correspondentes no 
 
 # Quais foram as dificuldades do trabalho?
 
-Nossas maiores dificuldades moraram no desafio para ir além! As imagens foram um problema para nós, mas que foi facilmente resolvido. Gostatíamos muito de ter ido até o D100 acompanhando com imagens os resultados, mas a nossa abordagem faria com que isso demorasse muito, além do tempo disponibilizado em sala. </br>
-Embora essa tenha sido uma dificuldade, a identificação do problema (em tese o maior desafio) foi "fácil" e muito divertido! 
+Nossas maiores dificuldades moraram no desafio para ir além. As imagens foram um problema para nós, mas que foi facilmente resolvido. Gostaríamos muito de ter ido até o D100 acompanhando com imagens os resultados, mas a nossa abordagem faria com que isso demorasse muito, além do tempo disponibilizado em sala. </br>
+Embora essa tenha sido uma dificuldade, a identificação do problema (em tese o maior desafio) foi "fácil" e muito divertida.
 
-# Contribuições de cada membro 
+# Contribuições de cada membro
 
 | Integrante | Foto | Contribuições |
 |---|---|---|
-| **Fernando Soares de Oliveira** | <img src="./fernando.jpg" width="90" /> | Código, documentação e explicação |
-| **Pietra Batista** | <img src="./pietra.jpg" width="90" /> | Código, anotações durante o desenvolvimento e ideias de resolução |
-| **Roberto Branco Diniz Filho** | <img src="./roberto.jpg" width="90" /> | Código, sintaxe de Kotlin e ideias de resolução |
+| **Fernando Soares de Oliveira** | <img src="./assets/Fernando.jpg" width="90" /> | Código, documentação e explicação |
+| **Pietra Batista** | <img src="./assets/pietra.jpg" width="90" /> | Código, anotações durante o desenvolvimento e ideias de resolução |
+| **Roberto Branco Diniz Filho** | <img src="./assets/Roberto.jpg" width="90" /> | Código, sintaxe de Kotlin e ideias de resolução |
